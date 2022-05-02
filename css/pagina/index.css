@@ -1,0 +1,94 @@
+@font-face {
+    font-family: RubikRegular;
+    src: url(../../fontes/Rubik-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: RubikBold;
+    src: url(../../fontes/Rubik-Bold.ttf);
+  }
+
+  body
+  {
+    font-family: RubikRegular;
+  } 
+  .titulo-login
+  {
+      text-align: center;
+  }
+
+  .titulo-login span
+  {
+    font-family: RubikBold;
+    font-size: 22px;
+  }
+
+.tbMinhasPausas
+{
+  width: 100%;
+}
+
+  .tbMinhasPausas td
+  {
+
+    padding: 0.75rem;
+   /* padding-right: 40px;
+    padding-left: 40px;*/
+    min-width: 190px;
+    font-size: 13px;
+
+  }
+
+.tbMinhasPausas span
+{
+   padding-right: 15px;
+  font-weight: bold;
+}
+.tbMinhasPausasTempoReal td
+{
+  padding: 0.75rem;
+  /*min-width: 190px;*/
+  font-size: 13px;
+}
+
+.tbMinhasPausasTempoReal span
+{
+  padding-right: 8px;
+  font-weight: bold;
+}
+
+.contador
+{
+  font-size: 21px;
+  font-weight: bold;
+  background-color: #dbd7d1;
+  text-align: center;
+  padding: 5px;
+  display: none;
+}
+
+#boxPausas
+{
+  padding: 8px;
+}
+
+#boxPausas th
+{
+  border-right: 1px solid #80808057;
+}
+
+.input-data
+{
+  /* width: 100%; */
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #6e707e;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #d1d3e2;
+  border-radius: 0.35rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s
+}

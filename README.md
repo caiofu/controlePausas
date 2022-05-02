@@ -4,7 +4,7 @@ Sistema de Controle de Pausas basico
 
 Gerencie as pausas dos colaboradores
 
-#Recursos:
+# Recursos:
 
 - Cadastro de novos usuarios
 
@@ -13,5 +13,5 @@ Gerencie as pausas dos colaboradores
 - Relatorio por periodo e usuario quantificando pausas
 
 
-#Arquivo SQL incluso para criar o banco de dados padrão.
+# Arquivo SQL incluso para criar o banco de dados padrão.
 

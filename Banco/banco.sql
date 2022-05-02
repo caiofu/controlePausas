@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 
 --
 -- Estrutura stand-in para vista `dadosdousuarioview`
--- (Veja abaixo para a view atual)
+
 --
 CREATE DATABASE IF NOT EXISTS controlepausa;
 

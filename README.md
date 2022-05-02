@@ -1,4 +1,4 @@
-# controlePausas
+# Controle de Pausas
 
 Sistema de Controle de Pausas basico
 

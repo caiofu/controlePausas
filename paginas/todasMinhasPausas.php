@@ -55,6 +55,7 @@
             <div  class="card-header py-3 d-flex flex-row align-items-center justify-content-between" id="divMinhasPausasHeader" style="display: none !important;">
                 <h6 class="m-0 font-weight-bold text-primary">Minhas Pausas</h6>
 
+                <span class="font-weight-bold  text-primary">Duração Total das Pausas: <span class="text-success" id="totalHoras"></span> </span>
                 <span class="font-weight-bold  text-primary">Total de Pausas: <span id="nTotalPausas"></span></span>
             </div>
             <!-- Card Body -->

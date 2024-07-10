@@ -17,11 +17,13 @@ function  BuscaMinhasPausas()
             contentType: false,
             processData: false,
             success: function (resposta) {
+                console.log(resposta)
                 document.getElementById('divTodasMinhasPausas').innerHTML  = "" //Resetando
                 if (resposta != 0) {
                     let dados = JSON.parse(resposta);
                     document.getElementById('divMinhasPausasHeader').style.display = 'block';
                     document.getElementById('nTotalPausas').innerHTML =  dados[0].qtdPausas;
+                    document.getElementById('totalHoras').innerHTML =  dados[0].totalHoras;
 
 
                     for (let i = 0; i < dados.length; i++)

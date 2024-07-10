@@ -60,6 +60,7 @@ function BuscaDados()
                                 "                    <th>Qtd. Pausas</th>" +
                                 "                    <th>Total de horas</th>";
                         }
+                        var contaTotalPausas = 0;
                         for (let i = 0; i < dados.length; i++)
                         {
                             if(selectTipoPausa.value != "")
@@ -82,7 +83,11 @@ function BuscaDados()
                                     "</tr>"
                             }
 
+                            contaTotalPausas = parseInt(contaTotalPausas) + parseInt(dados[i].ContaPausa);
+                            
                         }
+                        tableRegistros.innerHTML += "<tr><td colspan='4' style='font-weight: bold; text-align: center;'>TOTAL DE PAUSAS: "+contaTotalPausas+"</td></tr>"
+
 
 
                     } else {

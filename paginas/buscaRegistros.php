@@ -31,10 +31,10 @@
 
 
         $retorno = array();
-
+        $contaTotalPauas  = 0;
         while($resultado = $RegistroPausas->getBusca()->fetch(PDO::FETCH_ASSOC))
         {
-
+          
             array_push($retorno,
                 [   'dataRegistro'      => date("d/m/Y",strtotime($resultado['dataRegistro'])),
                     'nomeCompleto'       => $resultado['nomeCompleto'],

@@ -18,11 +18,11 @@
         if ($Token->getStatusToken() == 1)
         {
             session_start();
-            $_SESSION['logado']         = true;
-            $_SESSION['nomeUsuario']    = $Usuario->getNomeCompleto();
-            $_SESSION['usuario']        = $Usuario->getNomeUsuario();
-            $_SESSION['idUsuario']      = $Usuario->getIdUsuario();
-            $_SESSION['tipoUsuario']    = $Usuario->getIdTipoUsuario();
+            $_SESSION['cp_logado']         = true;
+            $_SESSION['cp_nomeUsuario']    = $Usuario->getNomeCompleto();
+            $_SESSION['cp_usuario']        = $Usuario->getNomeUsuario();
+            $_SESSION['cp_idUsuario']      = $Usuario->getIdUsuario();
+            $_SESSION['cp_tipoUsuario']    = $Usuario->getIdTipoUsuario();
 
           echo "logado";
         }

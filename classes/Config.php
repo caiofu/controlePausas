@@ -10,7 +10,7 @@ class Config
  // MYSQL
     private $hostMysql      = 'localhost';
     private $usuarioMysql   = 'root';
-    private $senhaMysql     = '';
+    private $senhaMysql     = '9Sa9v2Ut';
     private $bdMysql        = 'controlepausa';
 
  //CHAVE DE SEGURANÇA

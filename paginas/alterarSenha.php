@@ -7,17 +7,17 @@
 
     $senha = $_POST['novaSenha'];
 
-    $Usuario->select("*", "idUsuario={$_SESSION['idUsuario']}");
+    $Usuario->select("*", "idUsuario={$_SESSION['cp_idUsuario']}");
     $tokenAntigo = $Usuario->getToken();
 
     $Token->geraToken($_SESSION['usuario'], $senha);
 
     $Token->encryptSenha($_POST['novaSenha']);
 
-    $Usuario->update(["senha" =>$Token->getSenhaEncrypt(), "token" => $Token->getToken()], "idUsuario={$_SESSION['idUsuario']}");
+    $Usuario->update(["senha" =>$Token->getSenhaEncrypt(), "token" => $Token->getToken()], "idUsuario={$_SESSION['cp_idUsuario']}");
 
     //Validando se foi alterado
-    $Usuario->select("*", "idUsuario={$_SESSION['idUsuario']}");
+    $Usuario->select("*", "idUsuario={$_SESSION['cp_idUsuario']}");
     if ($Usuario->getToken() != $tokenAntigo)
     {
         echo 1;

@@ -8,7 +8,7 @@ include "../paginas/Funcoes.php";
     }
     date_default_timezone_set('America/Sao_Paulo');
 
-    $dataAtual = date("Y-m-d");
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -257,7 +257,7 @@ include "../paginas/Funcoes.php";
                                                 <div class="col-md-3 col-sm-6" style="margin-bottom: 7px;">
                                                     <?php
                                                     // CRIAR UMA VERIFICAÇAO PARA VOLTAR CONTADOR CASO A SESSAO TENHA EXPIRADO
-                                                   
+                                                    $dataAtual = date("Y-m-d");
                                                     $RegistroPausa = new RegistroPausas();
                                                     @$RegistroPausa->select("*","idUsuario={$_SESSION['cp_idUsuario']} AND horarioTermino = 0 ORDER BY idRegistroPausas DESC LIMIT 1 ");
                                                     @$RegistroPausa->contaRegistros("idUsuario={$_SESSION['cp_idUsuario']}  AND horarioTermino = 0 ORDER BY idRegistroPausas DESC LIMIT 1");
@@ -354,15 +354,7 @@ include "../paginas/Funcoes.php";
                                     <?php
                                       $CarregaRegistros = new DadosRegistroPausaVIEW();
                                       $CarregaRegistros->contaRegistros("dataRegistro='{$dataAtual}' AND idUsuario = {$_SESSION['cp_idUsuario']}");
-
-                                      //QUANTIDADE DE HORAS
-                                      $CarregaRegistros->select("TIME_FORMAT( SEC_TO_TIME( SUM( TIME_TO_SEC( CASE WHEN horarioInicio < horarioTermino THEN TIMEDIFF(horarioTermino, horarioInicio) ELSE TIMEDIFF(horarioInicio, horarioTermino) END ) ) ), '%H:%i:%s' ) AS totalHoras ",
-                                       "dataRegistro = '{$dataAtual}' AND idUsuario=  {$_SESSION['cp_idUsuario']}");
-                                       $totalHoras = $CarregaRegistros->getBusca()->fetch(PDO::FETCH_ASSOC);
-                                                           
-                                     
-                                     ?>
-                                     <span class="font-weight-bold  text-primary">Duração Total das Pausas: <span class="text-success"><?php echo $totalHoras['totalHoras']; ?></span> </span>
+                                      ?>
                                     <span class="font-weight-bold  text-primary">Total de Pausas: <?php echo $CarregaRegistros->getQtdRegistros(); ?></span>
                                 </div>
                                 <!-- Card Body -->

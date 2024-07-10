@@ -8,7 +8,7 @@
         $dataAtual = date("Y-m-d");
         $RegistroPausas = new RegistroPausas();
         $RegistroPausas->setHorarioInicio($_POST['horarioInicio']);
-        $RegistroPausas->setIdUsuario($_SESSION['idUsuario']);
+        $RegistroPausas->setIdUsuario($_SESSION['cp_idUsuario']);
         $RegistroPausas->setIdTipoPausa($_POST['idTipoPausa']);
         $RegistroPausas->setDataRegistro($dataAtual);
         $RegistroPausas->insert();

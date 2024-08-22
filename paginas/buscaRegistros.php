@@ -8,7 +8,9 @@
         $campoTipoPausa = "";
         if($_POST['tipoPausa'] != "")
         {
-            $tipoPausa = " AND idTipoPausa = {$_POST['tipoPausa']}";
+           // $tipoPausa = " AND idTipoPausa = {$_POST['tipoPausa']}";
+           $tipoPausa = $_POST['tipoPausa'] == 'todos' ? "" : "AND idTipoPausa = '{$_POST['tipoPausa']}'";
+           $group = $_POST['tipoPausa'] == 'todos'  ? 'nomeTipoPausas' : 'dataRegistro' ;
             $campoTipoPausa = "nomeTipoPausas,";
         }
         $RegistroPausas =  new DadosRegistroPausaVIEW();
@@ -19,14 +21,14 @@
             $RegistroPausas->select("dataRegistro, nomeCompleto, {$campoTipoPausa}
                                 time_format( SEC_TO_TIME(SUM( TIME_TO_SEC(TIMEDIFF(horarioInicio,horarioTermino)))),'%H:%i:%s') 
                                 AS totalHoras
-                                , COUNT(idTipoPausa) AS QtdPausas","dataRegistro BETWEEN '{$_POST['dataInicial']}' AND '{$_POST['dataFinal']}' AND horarioTermino != 0 {$tipoPausa}","","","dataRegistro, nomeCompleto");
+                                , COUNT(idTipoPausa) AS QtdPausas","dataRegistro BETWEEN '{$_POST['dataInicial']}' AND '{$_POST['dataFinal']}' AND horarioTermino != 0 {$tipoPausa}","nomeCompleto ASC","","{$group}, nomeCompleto");
         }
         else
         {
             $RegistroPausas->select("dataRegistro, nomeCompleto, {$campoTipoPausa}
             time_format( SEC_TO_TIME(SUM( TIME_TO_SEC(TIMEDIFF(horarioInicio,horarioTermino)))),'%H:%i:%s') 
             AS totalHoras
-            , COUNT(idTipoPausa) AS QtdPausas"," idUsuario = {$_POST['idUsuario']} AND dataRegistro BETWEEN '{$_POST['dataInicial']}' AND '{$_POST['dataFinal']}' AND horarioTermino != 0 {$tipoPausa}","","","dataRegistro, nomeCompleto");
+            , COUNT(idTipoPausa) AS QtdPausas"," idUsuario = {$_POST['idUsuario']} AND dataRegistro BETWEEN '{$_POST['dataInicial']}' AND '{$_POST['dataFinal']}' AND horarioTermino != 0 {$tipoPausa}","nomeCompleto ASC","","{$group}, nomeCompleto");
         }
 
 

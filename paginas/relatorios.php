@@ -54,7 +54,7 @@ $dataAtual = date("Y-m-d");
                                 <input type="date" id="dataFinal" class="form-control">
                             </div>
                             <div class="col-3" style=" margin-top: 30px;">
-                                <!-- Botao iniciar -->
+                                <!-- Botao iniciar  -->
 
                                 <a href="#" class="btn btn-success btn-icon-split" id="btnInicio" onclick="BuscaDados();" >
                                                         <span class="icon text-white-50">
@@ -78,6 +78,7 @@ $dataAtual = date("Y-m-d");
                     <br>
                     <select class="form-control" name="selectTipoPausa" id="selectTipoPausa">
                         <option value="" disabled selected>Selecione um tipo de pausa</option>
+                        <option value="todos">Todos</option>
                        <?php
                         $TiposPausa = new TipoPausas();
                         $TiposPausa->select("*");
@@ -101,7 +102,7 @@ $dataAtual = date("Y-m-d");
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">Minhas Pausas</h6>
 
-                <span class="font-weight-bold  text-primary">Total de Paussas:</span>
+                <!-- <span class="font-weight-bold  text-primary">Total de Pausas:</span> -->
             </div>
             <!-- Card Body -->
 

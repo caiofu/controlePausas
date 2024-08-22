@@ -54,7 +54,7 @@ $dataAtual = date("Y-m-d");
                                 <input type="date" id="dataFinal" class="form-control">
                             </div>
                             <div class="col-3" style=" margin-top: 30px;">
-                                <!-- Botao iniciar -->
+                                <!-- Botao iniciar  -->
 
                                 <a href="#" class="btn btn-success btn-icon-split" id="btnInicio" onclick="BuscaDados();" >
                                                         <span class="icon text-white-50">

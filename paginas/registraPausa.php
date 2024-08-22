@@ -15,7 +15,7 @@
 
 
        //Retornar o id do registro para poder fazer um update no mesmo registro com o horario do termino
-        $_SESSION['idUltimoRegistro'] = $RegistroPausas->getIdRegistroPausas(); //Validar puchando o ultimo registro do usuario pois a sessao pode expira
+        $_SESSION['idUltimoRegistro'] = $RegistroPausas->getIdRegistroPausas();
         echo $RegistroPausas->getIdRegistroPausas();
 
 

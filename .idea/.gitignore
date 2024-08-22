@@ -1,6 +1,7 @@
 # Default ignored files
 /shelf/
 /workspace.xml
+/Config.php
 # Datasource local storage ignored files
 /../../../../../:\xampp\htdocs\controlePausas\.idea/dataSources/
 /dataSources.local.xml

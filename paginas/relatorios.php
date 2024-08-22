@@ -101,7 +101,7 @@ $dataAtual = date("Y-m-d");
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                 <h6 class="m-0 font-weight-bold text-primary">Minhas Pausas</h6>
 
-                <span class="font-weight-bold  text-primary">Total de Pausas:</span>
+                <span class="font-weight-bold  text-primary">Total de Paussas:</span>
             </div>
             <!-- Card Body -->
 
@@ -110,7 +110,9 @@ $dataAtual = date("Y-m-d");
 
                     </thead>
                     <tbody id="tableRegistros">
-
+                       <tr>
+                        
+                       </tr>
                     </tbody>
                 </table>
         </div>

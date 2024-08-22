@@ -111,7 +111,9 @@ $dataAtual = date("Y-m-d");
 
                     </thead>
                     <tbody id="tableRegistros">
-
+                       <tr>
+                        
+                       </tr>
                     </tbody>
                 </table>
         </div>
